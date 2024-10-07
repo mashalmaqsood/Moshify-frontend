@@ -143,6 +143,15 @@ a{
     fill: var(--color-primary) ;
 }
 
+.icon-white{
+    fill: #fff;
+}
+
+.icon--small {
+    width: 30px;
+    height: 30px
+    }
+
 .icon-container{
     background: #f3f9fa;
     width: 64px;
@@ -151,6 +160,11 @@ a{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.icon-container--accent{
+    background: var(--color-accent);
 }
 /* Buttons */
 .btn{
@@ -178,6 +192,11 @@ a{
 .btn--secondary{
     background: var(--color-secondary);
     color: #fff;
+}
+
+.btn--stretched{
+   padding-left: 6rem;
+   padding-right: 6rem;
 }
 
 .btn--secondary:hover{
@@ -384,4 +403,87 @@ font-size:1.6rem;
     .quote_organization {
     font-size: 1.6rem:
 }
+}
+
+/* grids  */
+.grid{
+    display: grid;
+}
+
+@media screen and (min-width: 768px){
+   .grid--1x2{
+     grid-template-columns: repeat(2,1fr);
+   }
+}
+
+@media screen and (min-width: 1024px){
+    .grid--1x3{
+      grid-template-columns: repeat(3,1fr);
+    }
+ }
+
+ /* Testimonials  */
+ .testimonial{
+    padding: 3rem;
+ }
+ 
+ .testimonial__image > img{
+    width: 100%;
+ }
+
+ .testimonial__image{
+    position: relative;
+ }
+ .testimonial__image  .icon-container{
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+ }
+@media screen and (min-width : 768px){
+    .testimonial .quote,
+    .testimonial .quote__author{
+        font-size: 2.4rem;
+    }
+
+    .testimonial .quote{
+        margin-left: 6rem;
+    }
+
+}
+
+/* callouts */
+.callout{
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary{
+    background: var(--color-primary);
+    color: #fff;
+}
+.callout__heading{
+    color: #fff;
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.callout .btn{
+    justify-self: center;
+    align-self: center;
+}
+
+.callout__content{
+    text-align: center;
+}
+@media screen and (min-width : 768px){
+    .callout .grid--1x2{
+        grid-template-columns: 1fr auto;
+    }
+  .callout__content{
+    text-align: left;
+  }
+  .callout .btn{
+    justify-self: start;
+    margin: 0 2rem;
+  }
 }
